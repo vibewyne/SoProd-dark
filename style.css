@@ -1,0 +1,799 @@
+/* Dernière MAJ : 20/03//2023 */
+
+/* Comment installer le thème SoProd dark ?
+- Installer l'extension Chrome "Stylus"
+- "Créer un nouveau style"
+- Copier-coller toute cette page
+- En bas de la page dans "Tout +", choisir "URL commençant par" et y coller cette adresse : https://soprod.solocalms.fr
+- Cela permet d'éviter les conflits avec d'autres sites */
+
+:root {
+	--main: #845e37; /* Couleur principale du thème */
+	--secondary: #10596c ; /* Couleur secondaire, haut des tableaux */
+	--accent: #ccb789; /* Couleur des onglets en hauts des sous-fiches */
+	--relance-val: #133fb9; /* Couleur de la qualification de relance de validation */
+	--contact-principal: #507949; /* Couleur de surlignage du contact principal */
+	--contact-secondaire: #797849; /* Couleur de surlignage du contact secondaire */
+	--name: #3c2657; /* Nom de la personne ayant écrit le commentaire */
+	--mon-commentaire: #f2e9da; /* Couleur de fond de mes commentaires */
+	--mon-nom: #57270b; /* Couleur de mon nom dans les commentaires */
+	--white: #fff;
+	--almost-white: #d7d7d7;
+	--lighter-grey: #999;
+	--light-grey: #535353;
+	--grey: #444;
+	--dark-grey: #333;
+	--darkest-grey: #202020;
+	--almost-black: #141414;
+	--black: #000;
+	--red: #c82f2f;
+	--jaune-fluo: #f6ff00;
+	--vert-fluo: #0f0;
+	--delete : #a64545;
+}
+.page-header.navbar .page-logo .logo-default{
+	filter:grayscale(1)
+}
+span[data-index="2641"]{ /* CHANGE CE NUMERO POUR QUE CE SOIT LE TIENS*/
+	color: var(--accent);
+}
+
+/* Global */
+body, .eventType {
+	font-family: "Poppins", sans-serif;
+}
+body, .page-content, .table-scrollable > .table, .select2-results .select2-highlighted, .tabbable-custom > .tab-content, #masterWebGroupPortlet .nav.nav-tabs, .formGroupPortlet {
+	background-color: var(--dark-grey) !important;
+}
+.select2-drop{
+	background-color:var(--almost-black);
+	border-color:var(--light-grey);
+}
+.dropdown-menu .divider{
+	display:none;
+}
+.dropdown-user .dropdown-menu li > a{
+	color:var(--white) !important
+}
+.page-header.navbar .top-menu .navbar-nav > li.dropdown-user .dropdown-toggle .username {
+    color: var(--white);
+}
+.page-header.navbar .top-menu .navbar-nav > li.dropdown-user .dropdown-menu > li > a i{
+	color:var(--accent);
+	margin-right:3px
+}
+.progress > .progress-bar-success, .jumbotron, .form-wizard .steps > li.active > a.step .number, .requestTable [data-completed="0"] td, .red-thunderbird.btn {
+	background-color: var(--accent) !important;
+}
+label {
+	text-align: left !important
+}
+.table-scrollable, .form-group input, .form-group a, .form-control, .form-control .select2-choice, .select2-container-multi .select2-choices, .formfieldValue[data-editable="1"], div.dataTables_length select, input[type=search], .select2-dropdown-open .select2-choice, .select2-search input {
+	border: 1px solid var(--light-grey) !important;
+	color: var(--almost-white) !important;
+	background-color: var(--almost-black) !important;
+}
+.getComments span, #recordEdit #getComments span, #recordEdit #getRequests td, #recordEdit #getRequests span, #recordEdit #getLifeCycle td, #recordEdit #getNotificationHistory td, #recordEdit #getNotificationHistory span, .historyPortlet td, .historyPortlet span, .domainDMSContainer input {
+	color: var(--dark-grey);
+	font-weight: 500;
+}
+.select2-container-multi .select2-choices .select2-search-choice, .select2-container .select2-choice .select2-arrow, .table thead tr th, .portlet.blue-steel {
+	background-color: transparent
+}
+h1,h2,h3,h4,p,span,td,label,div,.form-control,.table-advance tr td,#masterWebGroupPortlet .chats li.in .message, .form-control::placeholder {
+	color: var(--almost-white)
+}
+.tile.shortcutClient, .tile.shortcutContract, .tile[data-title*="Call"], .tile[data-title*="CRM"], .tile[data-title*="COMMERCIAL"], .tile[data-title*="CONTRAT"], .tile[data-title*="VENTE"], .tile[data-title*="optimo"], .tile[data-title*="SOOPTIMO"], .tile[data-title*="ESCALADE"], .tile[data-title*="PRODUIT"], .tile[data-title*="PVI"], .tile[data-title*="DMS"], .tile[data-title*="Commentaires NDD"], .tile[data-title*="SEARCH"], .tile[data-title*="DOCS"], .tile[data-title*="CHECK"], .tile[data-title*="COCHER"], .tile[data-title*="JOUR"], .tile[data-title*="Template"], .tile[data-title*="JOUR"], .tile[data-title*="REPORTAGE"], .tile[data-title*="EXPRESSIONS"], .tile[data-title*="M1"], .tile[data-title*="presence"], .tile[data-title*="RECLAMATION"], .tile[data-title*="VENDEUR"], .tile[data-title*="SUIVI"], .tile[data-title*="TYPE MODIFICATION"], .tile[data-title*="CONTENU"], .tile[data-title*="GPS"], .tile[data-title*="FORMULAIRE"], .tile[data-title*="EMAILS"], .tile[data-title*="emails"], .tile[data-title*="Formulaire"], .tile[data-title*="seo"],.tile[data-title="Qualifications"] {
+	display: none;
+}
+i.star-primary {
+	color: var(--vert-fluo) !important;
+}
+i.star-secondary {
+	color: var(--jaune-fluo) !important;
+}
+.page-header.navbar .top-menu .navbar-nav > li.dropdown .dropdown-toggle .badge.badge-default,
+#header_events_bar>.dropdown-toggle>.badge-default{
+	background-color:var(--delete)
+}
+
+/* Fonds de boxs */
+.portlet.box {
+	border: 0 !important;
+	background-color: var(--dark-grey) !important;
+}
+.portlet.box > .portlet-title {
+	border-radius: 5px 5px 0 0 !important;
+	background-color: var(--light-grey) !important;
+	border-bottom: 0 !important
+}
+.portlet > .portlet-title > .caption,
+#myCalendarScheduleName,
+#active-webgroup a{
+	font-weight:600;
+	margin-top:2px;
+	letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+.portlet > .portlet-title > .caption > i{
+	margin-top:3px;
+	color: var(--accent) !important;
+}
+.portlet.box > .portlet-body {
+	background-color: var(--darkest-grey);
+	border-radius: 0 0 5px 5px !important;
+	padding: 15px 35px;
+}
+.portlet.box.blue-steel {
+	border-bottom: 1px solid var(--secondary);
+}
+#active-webgroup a{
+	color: var(--mon-commentaire);
+}
+.fa-comment{
+	color: var(--accent);
+}
+.prev a, .next a {
+    background-color: var(--secondary) !important;
+}
+
+
+/* Tableaux*/
+th[colspan] {
+	background-color: var(--secondary) !important;
+	color: var(--white) !important;
+	border-bottom: 1px solid var(--almost-white) !important;
+}
+th {
+	color: var(--white) !important;
+	border-bottom: 1px solid var(--white) !important
+}
+.table-scrollable th, .table-advance thead tr th {
+	border: 1px solid var(--lighter-grey) !important
+}
+.table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
+	border: 1px solid var(--light-grey) !important;
+	vertical-align: middle;
+}
+.table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th {
+	background-color: var(--light-grey) !important;
+}
+textarea {
+	color: var(--dark-grey)
+}
+.eventType {
+	background-color: var(--main);
+	padding: 8px 5px;
+	display: block;
+	margin: 5px;
+	letter-spacing: 0.4px;
+	font-weight: 400;
+	font-size: 13px;
+}
+feeds li .col1 {
+    background-color: var(--almost-black);
+}
+#DetailsRequestModal ~ .row:last-child > div:first-child{
+	width:88vw
+}
+#DetailsRequestModal ~ .row:last-child > div:last-child{
+	display:none
+}
+
+
+/* Boutons*/
+.form-group a.btn{
+	border: none !important;
+	margin-left:2px
+}
+.blue.btn, .green.btn, thead, .btn-success{
+	background-color: var(--secondary) !important;
+	border-bottom: 0
+}
+.red.btn, .red-pink.btn{
+	background-color: var(--delete) !important;
+}
+.green.btn:hover, .green.btn:focus, .green.btn:active, 
+.blue.btn:hover, .blue.btn:focus, .blue.btn:active,
+.red-pink.btn:hover, .red-pink.btn:focus, .red-pink.btn:active,
+.red.btn:hover, .red.btn:focus, .red.btn:active,
+.btn-success:hover, .btn-success:focus, .btn-success:active,
+.portlet > .portlet-title > .actions > .btn{
+	background-color: var(--main) !important
+}
+.btn.default {
+    color: #fff;
+    background-color: var(--secondary);
+}
+.click2callbtn_datatype, .urlbtn_datatype, .c2copenbtn_datatype, .filebtn, .btn-info{
+	margin-top:36px
+}
+.reloadDMSDomains, .reloadDMSEmails{
+	margin-top:0;
+	margin-left:10px;
+	background-color: var(--main)
+}
+.DMSEmailsPortlet > div > .btn-success,
+.DMSDomainsPortlet > div > .btn-success,
+.DMSKeywordsPortlet > div > .btn-success{
+	font-size:13px !important
+}
+.removeKeywords.btn.btn-danger{
+	background-color:var(--delete) !important;
+}
+a[id^="addKeyword"]{
+	background-color:var(--contact-principal) !important;
+	margin-top:25px !important
+}
+a[id^="addDMSDomain"],a[id^="addDMSEmail"]{
+	background-color:var(--contact-principal) !important;
+	margin-top:0 !important
+}
+.portlet > .portlet-title > .actions > .btn.btn-sm{
+	border:none !important
+}
+
+/* page Opérateur*/
+.tabbable-custom > .nav-tabs > li > a {
+	color: var(--accent);
+	font-weight: 600 !important
+}
+.tab-content {
+	padding-top: 55px !important
+}
+.tabbable-custom > .tab-content {
+	border: 0 !important
+}
+.operator-content {
+	margin-right: 90px;
+}
+.operator-content.masterPage {
+	padding: 0 !important;
+}
+.dropdown-menu li > a {
+    padding: 10px 15px;
+    background-color: var(--grey) !important;
+    color: var(--accent) !important;
+}
+.dropdown-menu li.active > a {
+    padding: 10px 15px;
+    background-color: var(--grey) !important;
+    color: var(--mon-commentaire) !important;
+}
+#tableRecordsList tr th:nth-of-type(1), #tableRecordsList tr th:nth-of-type(4), #tableRecordsList tr td:nth-of-type(1), #tableRecordsList tr td:nth-of-type(4), .contactsTable tr th:nth-of-type(14), .contactsTable tr td:nth-of-type(14), .contactsTable tr th:nth-of-type(15), .contactsTable tr td:nth-of-type(15), .contactsTable tr th:nth-of-type(16), .contactsTable tr td:nth-of-type(16) {
+	display: none
+}
+#tableRecordsList tr th:nth-of-type(2), #tableRecordsList tr td:nth-of-type(2) {
+	width: 100px !important
+}
+#tableRecordsList tr th:nth-of-type(3), #tableRecordsList tr td:nth-of-type(3) {
+	width: 200px !important
+}
+#tableRecordsList tr th:nth-of-type(5), #tableRecordsList tr td:nth-of-type(5) {
+	width: 100px !important
+}
+#tableRecordsList tr th:nth-of-type(6), #tableRecordsList tr td:nth-of-type(6) {
+	width: 150px !important
+}
+#tableRecordsList tr th:nth-of-type(7), #tableRecordsList tr td:nth-of-type(7) {
+	width: 310px !important
+}
+#tableRecordsList tr th:nth-of-type(8), #tableRecordsList tr td:nth-of-type(8) {
+	width: 300px !important
+}
+#tableRecordsList tr th:nth-of-type(9), #tableRecordsList tr td:nth-of-type(9) {
+	width: 90px !important;
+}
+.page-header.navbar .top-menu .navbar-nav > li.dropdown-extended .dropdown-menu{
+	width:600px;
+	max-width:unset !important;
+	background-color:var(--grey)
+}
+#header_events_bar .eventSet.selected{
+	background-color:var(--darkest-grey) !important
+}
+#header_events_bar .eventSet .fa-bell,
+#header_events_bar .eventSet .fa-info{
+	color:var(--white);
+}
+
+#header_events_bar>.dropdown-menu>li>.slimScrollDiv>.dropdown-menu-list>li>a,
+#header_notification_bar>.dropdown-menu>li>.slimScrollDiv>.dropdown-menu-list>li>a{
+	display: flex !important;
+    flex-direction: column;
+	align-items: flex-start;
+}
+#header_events_bar>.dropdown-menu>li>.slimScrollDiv>.dropdown-menu-list>li a br,
+#header_notification_bar>.dropdown-menu>li>.slimScrollDiv>.dropdown-menu-list>li>a br{
+	display:none
+}
+#header_events_bar>.dropdown-menu>li>.slimScrollDiv>.dropdown-menu-list>li>a span,
+#header_notification_bar>.dropdown-menu>li>.slimScrollDiv>.dropdown-menu-list>li>a span{
+	margin:3px 0
+}
+#header_events_bar>.dropdown-menu>li>.slimScrollDiv>.dropdown-menu-list>li>a span,
+#header_notification_bar>.dropdown-menu>li>.slimScrollDiv>.dropdown-menu-list>li>a span{
+	color: var(--white);
+}
+#header_events_bar>.dropdown-menu>li>.slimScrollDiv>.dropdown-menu-list>li>a span.details,
+#header_notification_bar>.dropdown-menu>li>.slimScrollDiv>.dropdown-menu-list>li>a span.details{
+    font-weight:700;
+}
+#header_events_bar>.dropdown-menu>li>.slimScrollDiv>.dropdown-menu-list>li>a span.time,
+#header_notification_bar>.dropdown-menu>li>.slimScrollDiv>.dropdown-menu-list>li>a span.time{
+    font-weight:700;
+	color:var(--accent);
+	font-size:13px !important
+}
+#header_events_bar>.dropdown-menu>li>.slimScrollDiv>.dropdown-menu-list>li>a span.helper,
+#header_notification_bar>.dropdown-menu>li>.slimScrollDiv>.dropdown-menu-list>li>a span.helper{
+	font-size:13px !important
+}
+#header_events_bar>.dropdown-menu>li>.slimScrollDiv>.dropdown-menu-list>li>a span.time i,
+#header_notification_bar>.dropdown-menu>li>.slimScrollDiv>.dropdown-menu-list>li>a span.time i{
+    margin-right: 3px;
+}
+.page-header.navbar .top-menu .navbar-nav > li.dropdown-extended .dropdown-menu > li {
+    background-color: var(--secondary) !important;
+	border-bottom:0 !important
+}
+
+.slimScrollDiv, .dropdown-menu-list{
+	height:unset !important
+}
+.alertRead .helper,
+.alertRead .time {
+    height: unset;
+    position: unset;
+    top: unset;
+    font-size: unset;
+    display : unset;
+    float: unset;
+    width: unset;
+    opacity: unset;
+}
+.alertRead{
+	height:auto
+}
+.dropdown-menu li > a {
+    padding: 10px 15px;
+}
+.dropdown-menu{
+	box-shadow:none;
+	border:1px solid var(--light-grey)
+}
+
+/* Commentaires */
+#masterWebGroupPortlet .nav.nav-tabs {
+	max-width: unset;
+	border-color:var(--light-grey)
+}
+#masterWebGroupPortlet .chats li.in .message.mine {
+	background-color: var(--mon-commentaire) !important;
+}
+#masterWebGroupPortlet .chats li .message .body, #getComments .chats li .message .body{
+	color: var(--darkest-grey)!important;
+	font-size: 12.25px;
+	margin: 10px 20px 15px 20px;
+}
+.chats li .datetime {
+	color: var(--name) !important;
+	font-size: 13px;
+	font-weight: 500;
+	opacity: 0.8
+}
+.chats li .mine .datetime {
+	color: var(--mon-nom) !important;
+	opacity: 0.8
+}
+.chats li .name {
+	color: var(--name);
+	text-decoration: underline;
+	display: block;
+	text-align: left !important;
+	font-weight: 800
+}
+.chats li .mine .name {
+	color: var(--mon-nom) !important;
+}
+.chats li .flow-label {
+	color: var(--main) !important
+}
+.chat-form {
+	background-color: var(--darkest-grey) !important;
+	margin-top: 10px !important;
+}
+.chat-form .input-cont .form-control {
+	background-color: transparent !important
+}
+.chats li.out .message {
+	margin-right: 0 !important;
+}
+
+
+/*  Sous-fiches */
+.contactsTable tbody tr[isprimarycontact="1"][issecondarycontact="0"] td {
+	background-color: var(--contact-principal) !important;
+}
+.assignationActive td {
+	color: var(--accent) !important;
+	;
+}
+.col-md-8 {
+	width: 90%;
+}
+.souploadTable td {
+	width: 41% !important;
+}
+.externalPortlet a div {
+	margin: 3px 0;
+	height: 35px;
+	line-height: 30px;
+}
+.qualificationElement {
+	color: var(--black);
+	width: 100%;
+	font-weight: 500;
+	margin: 6px auto;
+}
+[data-name="RELANCE VAL HOME REFONTE"], [data-name="INJOIGNABLE VAL HOME REFONTE"], [data-name="DEMANDE REFONTE FAITE PAR ERREUR"] {
+	background-color: var(--almost-white) !important
+}
+[data-name="VAL HOME REFONTE OK - RDV VAL FINALE REFONTE"], [data-name="VAL HOME REFONTE KO - RDV VAL HOME REFONTE"] {
+	background-color: var(--contact-principal) !important
+}
+[data-name="VAL HOME REFONTE OK - RELANCE VAL FINALE"], [data-name="VAL HOME REFONTE KO - RELANCE VAL HOME REFONTE"] {
+	background-color: var(--relance-val) !important
+}
+[data-name="Nouvel envoi d'email Sobat pour la  val intermediaire Refonte Privilege ( generation sobat )"] {
+	background-color: var(--main) !important;
+	overflow: hidden
+}
+.qualificationTr[data-qualification="RELANCE VAL HOME REFONTE"] .qualif span, .qualificationTr[data-qualification="APPEL DE BRIEF OK - RELANCE VAL  HOME REFONTE"] .qualif span {
+	color: var(--almost-black)
+}
+div .tiles .tile .tile-body {
+	padding: 0;
+}
+div .operatorElements {
+	overflow-y: visible;
+	margin-top: 45px;
+}
+div .operatorElements .tile .tile-body > i {
+	font-size: 22px;
+	margin-top: 10px;
+	line-height: 15px;
+}
+div .operatorElements .tile-object .name {
+	width: 100% !important;
+	margin-bottom: 0 !important;
+}
+div .operatorElements .tile[data-title*="WAR ROOM"], div .operatorElements .tile[data-title*="WAR ROOM"]:hover {
+	background: var(--main) !important;
+}
+div .operatorElements .tile {
+	border: 1px solid transparent;
+	height: 60px !important;
+	width: 90px !important;
+	border-radius: 4px 0 0 4px !important;
+	background: var(--main) !important;
+	transition: 0.2s;
+	margin: 2px 0
+}
+div .operatorElements .tile:hover {
+	width: 200px !important;
+	background: var(--main) !important;
+}
+div .operatorElements .tile:nth-child(even) {
+	background: var(--secondary) !important;
+}
+div .operatorElements .tile:nth-child(even):hover {
+	background: var(--secondary) !important;
+}
+
+
+/* Page Consultation*/
+.select2-container-multi .select2-choices .select2-search-field, .select2-container-multi .select2-choices .select2-search-field input {
+	border: 0 !important;
+	font-family: "Poppins";
+	color: var(--almost-white) !important;
+}
+.form-control.select2-container {
+	border: 0 !important
+}
+.souploadTable td {
+	padding: 10px 0 !important;
+}
+#consultationFiltersUL span {
+	color: var(--dark-grey);
+}
+.requestDetailsTr {
+	border: 1px solid var(--white) !important
+}
+textarea {
+	border: 1px solid var(--light-grey) !important;
+}
+#consultationSearch h4,  .control-label {
+	padding: 0 !important;
+	font-weight: 600;
+	margin-top: 15px !important;
+	font-size: 15px !important;
+	font-family: "Poppins"
+}
+.pull-right.tooltips.form-group {
+	display: none
+}
+#consultationSearch {
+	padding: 25px !important
+}
+.tabbable-custom > .nav-tabs > li.active > a {
+	border: 0 !important;
+	background-color: var(--dark-grey) !important;
+}
+.notificationHistory tr.sent td {
+    background-color: var(--almost-black) !important;
+}
+.recordNames span {
+	color: var(--almost-black);
+	font-size: 19px
+}
+.contactsTable tbody tr[isprimarycontact="0"][issecondarycontact="1"] td {
+	background-color: var(--contact-secondaire) !important;
+}
+.tabbable-custom > .nav-tabs > li.active {
+	border-top: 3px solid var(--dark-grey);
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+	color: var(--mon-commentaire)
+}
+#consultationSearch .select2-results ul.select2-result-sub > li .select2-result-label:before {
+	content: "- ";
+}
+.select2-container .select2-choice .select2-arrow {
+	border-left: 1px solid var(--light-grey);
+}
+.modal-dialog div, .modal-dialog span, .modal-dialog h1, .modal-dialog h2, .modal-dialog h3, .modal-dialog h4, .modal-dialog th,.modal-dialog label {
+	color: var(--dark-grey) !important;
+}
+.modal-dialog .form-group input, .modal-dialog .form-group a, .modal-dialog .form-group span, .requestDetailsTr td, [id^=SoUploadArea] td, .fc-axis.fc-time.fc-widget-content span, .qualificationTr.sent > td, #recordEdit #getRequests .selected td, .news-blocks a.news-block-btn {
+	color: var(--white) !important;
+}
+.dataTables_paginate, .dataTables_paginate * {
+	background-color: transparent !important;
+	color: var(--almost-white) !important;
+}
+.recordHistory .qualificationTr td span.qName {
+	color: var(--black);
+}
+tr.openSubRecords.odd td, tr.indent-subrecords.odd {
+	background-color: var(--darkest-grey);
+}
+.recordNames > span:not(.recordId), .recordNames i {
+	display: none;
+}
+.recordId {
+	margin: 0 !important
+}
+.form-wizard .steps > li > a.step > span {
+	color: var(--dark-grey) !important;
+	font-weight: 400 !important;
+}
+.form-wizard .steps > li > a.step > .number {
+	padding: 6px 15px 0px 15px;
+}
+.notificationHistory tr.notsent td,
+.notificationHistory tr.waitingsend td{
+    background-color: var(--contact-secondaire) !important;
+}
+.divFilter {
+    float: left !important;
+    margin: 0 7px !important;
+}
+.dashboardGroupTH.dashboardGroupEntities span {
+    color: var(--black) !important;
+    font-weight: 600;
+}
+.dashboardGroupTH.dashboardGroupEntities span i{
+    display:none
+}
+.select2-container.select2-container-disabled .select2-choice .select2-arrow{
+	background-color: transparent;
+}
+.previewEvents .qualificationTr td span.qName,
+.notificationHistory .qualificationTr td span.qName{
+	color:var(--almost-black);
+}
+#notificationHistoryTable > thead > tr > th:nth-of-type(4){
+	width:350px !important
+}
+
+/* News accueil */
+.news-blocks, .news-blocks:hover {
+	border: solid 1px var(--grey) !important;
+	background: var(--darkest-grey) !important;
+}
+.news-blocks-content .read-more, .news-blocks:hover p.read-more {
+	background-image: none;
+}
+.news-blocks h3 a {
+	color: var(--white);
+	font-weight: 600;
+}
+.top-news a {
+	margin-bottom: 0;
+	background-color: var(--main) !important;
+}
+.group-news-blocks.expanded {
+	margin-bottom: 50px;
+}
+.news-blocks:hover {
+	border-color: transparent;
+	background: unset;
+}
+h6 {
+	font-size: 17px;
+}
+
+/* Agenda */
+.officeCalendar .fc-past, .msCalendar .fc-past {
+	background-color: var(--grey);
+}
+.fc-time-grid-event.fc-v-event.fc-event.fc-start.fc-end.fc-not-resizable:not(.fc-time-grid-event.fc-v-event.fc-event.fc-start.fc-end.fc-not-resizable:first-child) {
+	margin: 1px 0 0 -50.5%;
+	height: max-content;
+	background-color: var(--black) !important;
+}
+.fc-time-grid-event.fc-v-event.fc-event.fc-start.fc-end.fc-not-resizable > .fc-content {
+	padding: 4px 0 0 15px;
+}
+.fc-time-grid-event.fc-short .fc-content {
+	background-color: var(--secondary) !important;
+}
+.portlet.calendar .fc-event {
+    margin: 1px 0px 1px 3px !important;
+    width: 97% !important;
+	background-color: var(--main) !important;
+	border:none
+}
+.portlet.calendar .fc-event.event-type3[data-original-title*="OCCUPÉ"] {
+	background-color: var(--red) !important;
+	border-color: var(--red) !important
+}
+.portlet.calendar .fc-widget-header {
+    background-color: var(--almost-black);
+}
+.portlet.calendar .fc-button.fc-state-active, .portlet.calendar .fc-button.fc-state-hover {
+    color: var(--white);
+    background-color: var(--main);
+}
+.fc-unthemed .fc-today {
+    background: var(--black);
+}
+.fc-day-grid-event .fc-content {
+    white-space:break-spaces;
+	display: flex;
+    flex-direction: column;
+	padding: 2px
+}
+.fc-day-grid-event .fc-content > span{
+    font-size:12px
+}
+.fc-basic-view .fc-body .fc-row{
+	height:250px !important
+}
+.fc-day-grid-event .fc-time {
+    font-weight: bold;
+    color: var(--accent);
+}
+.fc-ltr .fc-basic-view .fc-day-number {
+    padding-right:10px
+}
+.fc-ltr .fc-basic-view .fc-day-number:not(.fc-other-month){
+	font-weight:700;
+	margin-right:5px
+}
+.fc-day-grid-container.fc-scroller{
+	height:1000px !important
+}
+.portlet.box.calendar .fc-toolbar > .fc-right {
+	margin-top: -43px;
+}
+.col-md-offset-3 {
+    margin-left: 0;
+}
+.portlet.box.grey-cascade.calendar{
+	width:87vw
+}
+.userCalendarLayout {
+    width: 85%;
+    position: fixed;
+    top: 55px;
+    right: 9px;
+    z-index: 999999;
+}
+.select2-container .select2-choice, .select2-search input{
+	background-color:transparent !important;
+	background-image: none;
+}
+body .rdv_calendar_previous, body .rdv_calendar_next{
+	background-color:transparent;
+	color:var(--white) !important
+	
+}
+body .rdv_calendar_previous:hover  , body .rdv_calendar_next:hover{
+	background-color:transparent !important;
+	
+}
+.select2-container .select2-choice > .select2-chosen{
+	color:var(--white) !important
+}
+.calendar-title-wrapper.rdv_calendar_day p:first-child{
+	margin: 15px 0 0 0;
+}
+.rdv_calendar_previous i, .rdv_calendar_next i{
+	margin-top:18px !important
+}
+
+
+/* Tout le reste */
+.operator-timer {
+    font-size: 18px;
+	letter-spacing: 1px;
+}
+#layout-page-sidebar {
+	height: 100vh !important;
+}
+.divFilter {
+	float: left;
+	display: block;
+	width: 19% !important;
+	margin-right: 1%;
+}
+.record-header {
+	display: none
+}
+.operator-diabolocom, .page-sidebar-menu .active > a {
+	background-color: var(--main) !important
+}
+.modal-dialog .control-label {
+	margin-top: 5px !important
+}
+#divfilters .divFilter {
+	width: 100% !important;
+}
+.page-sidebar-menu span {
+	color: var(--white) !important;
+	font-weight: 400
+}
+.page-sidebar {
+	width: 204px;
+}
+.page-content-wrapper .page-content {
+	margin-left: 204px;
+}
+
+.qualificationTr.requestDetailsTr, .table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th {
+	background-color: var(--dark-grey);
+}
+.requestTable td:not(.requestDetailsTr td) {
+	color: var(--black) !important;
+	font-size: 11px !important;
+}
+.WebLinks.badge {
+	border-radius: 0 !important;
+	line-height: 23px !important
+}
+.unavailable {
+	background: var(--main) !important;
+}
+.available {
+	background: var(--contact-principal) !important;
+}
+tr.openSubRecords.even td, tr.indent-subrecords.even {
+	background-color: var(--dark-grey)
+}
+
+.form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+}
