@@ -49,6 +49,9 @@ body, .page-content, .table-scrollable > .table, .select2-results .select2-highl
 	background-color:var(--almost-black);
 	border-color:var(--light-grey);
 }
+.select2-results .select2-highlighted ul, .select2-results li.select2-result-with-children > .select2-result-label {
+    background: var(--almost-black);
+}
 .dropdown-menu .divider{
 	display:none;
 }
@@ -68,10 +71,11 @@ body, .page-content, .table-scrollable > .table, .select2-results .select2-highl
 label {
 	text-align: left !important
 }
-.table-scrollable, .form-group input, .form-group a, .form-control, .form-control .select2-choice, .select2-container-multi .select2-choices, .formfieldValue[data-editable="1"], div.dataTables_length select, input[type=search], .select2-dropdown-open .select2-choice, .select2-search input {
+.table-scrollable, .form-group input, .form-group a, .form-control, .form-control .select2-choice, .select2-container-multi .select2-choices, .formfieldValue[data-editable="1"], div.dataTables_length select, input[type=search], .select2-dropdown-open .select2-choice, .select2-search input, .fc .fc-button-group > *{
 	border: 1px solid var(--light-grey) !important;
 	color: var(--almost-white) !important;
 	background-color: var(--almost-black) !important;
+	background-image:none;
 }
 .getComments span, #recordEdit #getComments span, #recordEdit #getRequests td, #recordEdit #getRequests span, #recordEdit #getLifeCycle td, #recordEdit #getNotificationHistory td, #recordEdit #getNotificationHistory span, .historyPortlet td, .historyPortlet span, .domainDMSContainer input {
 	color: var(--dark-grey);
@@ -182,6 +186,9 @@ feeds li .col1 {
 
 
 /* Boutons*/
+#modifySchedule, #seeScheduleRecap, .seeScheduleInfo, .modifySchedule, #cancelModify, #UserEditScheduleSubmit {
+	margin-top:20px !important
+}
 .form-group a.btn{
 	border: none !important;
 	margin-left:2px
