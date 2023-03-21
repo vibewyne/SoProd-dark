@@ -1,4 +1,4 @@
-/* Dernière MAJ : 20/03//2023 */
+/* Dernière MAJ : 21/03//2023 */
 
 /* Comment installer le thème SoProd dark ?
 - Installer l'extension Chrome "Stylus"
@@ -715,10 +715,9 @@ h6 {
 	background-color:transparent !important;
 	background-image: none;
 }
-body .rdv_calendar_previous, body .rdv_calendar_next{
-	background-color:transparent;
-	color:var(--white) !important
-	
+body .rdv_calendar_previous, body .rdv_calendar_next {
+    background-color: transparent !important;
+    color: var(--white) !important;
 }
 body .rdv_calendar_previous:hover  , body .rdv_calendar_next:hover{
 	background-color:transparent !important;
