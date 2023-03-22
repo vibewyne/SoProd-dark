@@ -559,8 +559,17 @@ textarea {
 .select2-container .select2-choice .select2-arrow {
 	border-left: 1px solid var(--light-grey);
 }
+.modal-backdrop.in {
+    opacity: .7;
+}
 .modal-dialog div, .modal-dialog span, .modal-dialog h1, .modal-dialog h2, .modal-dialog h3, .modal-dialog h4, .modal-dialog th,.modal-dialog label {
 	color: var(--white) !important;
+}
+.bootbox modal.fade.bootbox-preview.in *, .stylingblock-content-wrapper{
+	background-color:var(--grey)
+}
+.bootbox-preview .modal-dialog {
+    min-width: 1200px;
 }
 #qualificationRequiredFieldsEdit.modal.in .modal-dialog .formGroupPortlet.portlet.box,
 #qualificationRequiredFieldsEdit.modal.in .modal-dialog .formGroupPortlet.portlet.box > div{
@@ -663,6 +672,9 @@ h6 {
 .officeCalendar .fc-past, .msCalendar .fc-past {
 	background-color: var(--grey);
 }
+.userCalendarLayout{
+	z-index:99999 !important
+}
 .rdv_calendar_minutes.show{
 	background-color:var(--grey) !important;
 	box-shadow: none;
@@ -674,6 +686,9 @@ h6 {
 .calendar-title-wrapper.rdv_calendar_day{
 	text-align:left;
 	margin-left:45px
+}
+.fc-time-grid-event.fc-v-event.fc-event.fc-start.fc-end.fc-not-resizable:not(.fc-time-grid-event.fc-v-event.fc-event.fc-start.fc-end.fc-not-resizable:first-child){
+	margin-left: -50% !important
 }
 .rdv_calendar_minutes.show.first-cell, .rdv_calendar_minutes.show.last-cell{
 	box-shadow: none;
@@ -691,14 +706,28 @@ h6 {
 	background-color: var(--black) !important;
 }
 .fc-time-grid-event.fc-v-event.fc-event.fc-start.fc-end.fc-not-resizable > .fc-content {
-	padding: 4px 0 0 15px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.fc-time-grid-container.fc-scroller{
+	height:620px !important
 }
 .fc-time-grid-event.fc-short .fc-content {
 	background-color: var(--secondary) !important;
 }
+.fc-time-grid-event.fc-short .fc-title, .fc-time-grid-event.fc-short.fc-title {
+    font-size: 1em;
+    padding: 0;
+    white-space: break-spaces;
+}
+.fc-time-grid-event .fc-time {
+    font-size: 1em;
+    font-weight: 600;
+}
 .portlet.calendar .fc-event {
-    margin: 1px 0px 1px 3px !important;
-    width: 97% !important;
+    margin: 0 !important;
+    width: 102% !important;
 	background-color: var(--main) !important;
 	border:none
 }
@@ -710,8 +739,8 @@ h6 {
     background-color: var(--almost-black);
 }
 .portlet.calendar .fc-button.fc-state-active, .portlet.calendar .fc-button.fc-state-hover {
-    color: var(--white);
-    background-color: var(--main);
+    color: var(--white) !important;
+    background-color: var(--main) !important;
 }
 .fc-unthemed .fc-today {
     background: var(--black);
@@ -754,9 +783,18 @@ h6 {
 .userCalendarLayout {
     width: 85%;
     position: fixed;
-    top: 55px;
-    right: 9px;
+    top: 46px;
+    right: 0px;
     z-index: 999999;
+}
+.userCalendarLayout > .portlet.box.blue-steel{
+	box-shadow: var(--black) 0px 5px 15px;
+}
+.nav #toggleUserCalendar:hover, .nav #toggleUserCalendar.calendaropen{
+	background-color: var(--secondary) !important;
+}
+.nav #toggleUserCalendar:hover i, .nav #toggleUserCalendar.calendaropen i{
+	color:var(--white)
 }
 .select2-container .select2-choice, .select2-search input{
 	background-color:transparent !important;
