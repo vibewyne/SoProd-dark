@@ -1,4 +1,4 @@
-/* Dernière MAJ : 21/03//2023 */
+/* Dernière MAJ : 22/03//2023 */
 
 /* Comment installer le thème SoProd dark ?
 - Installer l'extension Chrome "Stylus"
@@ -193,7 +193,7 @@ feeds li .col1 {
 	border: none !important;
 	margin-left:2px
 }
-.blue.btn, .green.btn, thead, .btn-success{
+.blue.btn, .green.btn, thead, .btn-success, .btn-primary, .btn.soprod-modal-close {
 	background-color: var(--secondary) !important;
 	border-bottom: 0
 }
@@ -225,7 +225,7 @@ feeds li .col1 {
 .DMSKeywordsPortlet > div > .btn-success{
 	font-size:13px !important
 }
-.removeKeywords.btn.btn-danger{
+.removeKeywords.btn.btn-danger, .btn-danger{
 	background-color:var(--delete) !important;
 }
 a[id^="addKeyword"]{
@@ -560,10 +560,28 @@ textarea {
 	border-left: 1px solid var(--light-grey);
 }
 .modal-dialog div, .modal-dialog span, .modal-dialog h1, .modal-dialog h2, .modal-dialog h3, .modal-dialog h4, .modal-dialog th,.modal-dialog label {
-	color: var(--dark-grey) !important;
+	color: var(--white) !important;
+}
+#qualificationRequiredFieldsEdit.modal.in .modal-dialog .formGroupPortlet.portlet.box,
+#qualificationRequiredFieldsEdit.modal.in .modal-dialog .formGroupPortlet.portlet.box > div{
+	background-color: transparent !important
+}
+#qualificationRequiredFieldsEdit.modal.in .modal-dialog .formGroupPortlet.portlet.box .btn {
+	margin-top:27px !important
+}
+.modal-content{
+	background-color:var(--grey);
+	border: 1px solid var(--light-grey)
+}
+.modal .modal-header, .modal-footer{
+    border-color:var(--light-grey);
 }
 .modal-dialog .form-group input, .modal-dialog .form-group a, .modal-dialog .form-group span, .requestDetailsTr td, [id^=SoUploadArea] td, .fc-axis.fc-time.fc-widget-content span, .qualificationTr.sent > td, #recordEdit #getRequests .selected td, .news-blocks a.news-block-btn {
 	color: var(--white) !important;
+}
+.modal .close {
+    filter: invert(1);
+    opacity: 1;
 }
 .dataTables_paginate, .dataTables_paginate * {
 	background-color: transparent !important;
@@ -644,6 +662,28 @@ h6 {
 /* Agenda */
 .officeCalendar .fc-past, .msCalendar .fc-past {
 	background-color: var(--grey);
+}
+.rdv_calendar_minutes.show{
+	background-color:var(--grey) !important;
+	box-shadow: none;
+}
+.calendar-time-wrapper.active .rdv_calendar_hour{
+	background-color:var(--main);
+	clip-path:inset(4% 3% 4% 3% round 12px);
+}
+.calendar-title-wrapper.rdv_calendar_day{
+	text-align:left;
+	margin-left:45px
+}
+.rdv_calendar_minutes.show.first-cell, .rdv_calendar_minutes.show.last-cell{
+	box-shadow: none;
+}
+#fdev_calendar.allowRedZones tbody td .rdv_calendar_minute.inactive:hover, .rdv_calendar_minute.active:hover{
+	background-color:var(--main) !important ;
+	clip-path: inset(4% 1% 4% 1% round 12px);
+}
+.goToNextEvent, .goToNextEvent:hover{
+	color:var(--vert-fluo) !important;
 }
 .fc-time-grid-event.fc-v-event.fc-event.fc-start.fc-end.fc-not-resizable:not(.fc-time-grid-event.fc-v-event.fc-event.fc-start.fc-end.fc-not-resizable:first-child) {
 	margin: 1px 0 0 -50.5%;
