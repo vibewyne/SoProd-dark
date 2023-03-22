@@ -669,8 +669,8 @@ h6 {
 }
 
 /* Agenda */
-.officeCalendar .fc-past, .msCalendar .fc-past {
-	background-color: var(--grey);
+.officeCalendar .fc-past, .msCalendar .fc-past, .officeCalendar .fc-past, .officeCalendar .fc-future, .msCalendar .fc-future, .officeCalendar .fc-future{
+	background-color: var(--almost-black);
 }
 .userCalendarLayout{
 	z-index:99999 !important
@@ -687,9 +687,6 @@ h6 {
 	text-align:left;
 	margin-left:45px
 }
-.fc-time-grid-event.fc-v-event.fc-event.fc-start.fc-end.fc-not-resizable:not(.fc-time-grid-event.fc-v-event.fc-event.fc-start.fc-end.fc-not-resizable:first-child){
-	margin-left: -50% !important
-}
 .rdv_calendar_minutes.show.first-cell, .rdv_calendar_minutes.show.last-cell{
 	box-shadow: none;
 }
@@ -701,14 +698,17 @@ h6 {
 	color:var(--vert-fluo) !important;
 }
 .fc-time-grid-event.fc-v-event.fc-event.fc-start.fc-end.fc-not-resizable:not(.fc-time-grid-event.fc-v-event.fc-event.fc-start.fc-end.fc-not-resizable:first-child) {
-	margin: 1px 0 0 -50.5%;
 	height: max-content;
-	background-color: var(--black) !important;
+	margin-left: -50% !important;
+	background-color:var(--secondary) !important
 }
 .fc-time-grid-event.fc-v-event.fc-event.fc-start.fc-end.fc-not-resizable > .fc-content {
     padding: 5px;
     display: flex;
     flex-direction: column;
+}
+.fc-event .fc-bg{
+	display:none
 }
 .fc-time-grid-container.fc-scroller{
 	height:620px !important
@@ -725,6 +725,9 @@ h6 {
     font-size: 1em;
     font-weight: 600;
 }
+.fc-unthemed th, .fc-unthemed td, .fc-unthemed thead, .fc-unthemed tbody, .fc-unthemed .fc-divider, .fc-unthemed .fc-row, .fc-unthemed .fc-popover {
+    border-color: var(--light-grey);
+}
 .portlet.calendar .fc-event {
     margin: 0 !important;
     width: 102% !important;
@@ -732,11 +735,11 @@ h6 {
 	border:none
 }
 .portlet.calendar .fc-event.event-type3[data-original-title*="OCCUPÉ"] {
-	background-color: var(--red) !important;
-	border-color: var(--red) !important
+	background-color: var(--delete) !important;
+	border-color: var(--delete) !important;
 }
 .portlet.calendar .fc-widget-header {
-    background-color: var(--almost-black);
+    background-color: var(--darkest-grey);
 }
 .portlet.calendar .fc-button.fc-state-active, .portlet.calendar .fc-button.fc-state-hover {
     color: var(--white) !important;
