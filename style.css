@@ -1,4 +1,4 @@
-/* Dernière MAJ : 29/03//2023 */
+/* Dernière MAJ : 30/03//2023 */
 
 /* Comment installer le thème SoProd dark ?
 - Installer l'extension Chrome "Stylus"
@@ -87,6 +87,9 @@ label {
 h1,h2,h3,h4,p,span,td,label,div,.form-control,.table-advance tr td,#masterWebGroupPortlet .chats li.in .message, .form-control::placeholder {
 	color: var(--almost-white);
 	font-family: "Poppins";
+}
+h1,h2,h3,h4{
+	padding-left:0 !important
 }
 .tile.shortcutClient, .tile.shortcutContract, .tile[data-title*="Call"], .tile[data-title*="CRM"], .tile[data-title*="COMMERCIAL"], .tile[data-title*="CONTRAT"], .tile[data-title*="VENTE"], .tile[data-title*="optimo"], .tile[data-title*="SOOPTIMO"], .tile[data-title*="ESCALADE"], .tile[data-title*="PRODUIT"], .tile[data-title*="PVI"], .tile[data-title*="DMS"], .tile[data-title*="Commentaires NDD"], .tile[data-title*="SEARCH"], .tile[data-title*="DOCS"], .tile[data-title*="CHECK"], .tile[data-title*="COCHER"], .tile[data-title*="JOUR"], .tile[data-title*="Template"], .tile[data-title*="JOUR"], .tile[data-title*="REPORTAGE"], .tile[data-title*="EXPRESSIONS"], .tile[data-title*="M1"], .tile[data-title*="presence"], .tile[data-title*="RECLAMATION"], .tile[data-title*="VENDEUR"], .tile[data-title*="SUIVI"], .tile[data-title*="TYPE MODIFICATION"], .tile[data-title*="CONTENU"], .tile[data-title*="GPS"], .tile[data-title*="FORMULAIRE"], .tile[data-title*="EMAILS"], .tile[data-title*="emails"], .tile[data-title*="Formulaire"], .tile[data-title*="seo"],.tile[data-title="Qualifications"] {
 	display: none;
