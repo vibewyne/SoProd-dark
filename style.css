@@ -1,16 +1,16 @@
-/* Dernière MAJ : 30/03//2023 */
+/* Dernière MAJ : 12/04/2023 */
 
 /* Comment installer le thème SoProd dark ?
 - Installer l'extension Chrome "Stylus"
 - "Créer un nouveau style"
-- Copier-coller toute cette page
+- Copier-coller toute cette page (tu peux minifier si tu veux)
 - En bas de la page dans "Tout +", choisir "URL commençant par" et y coller cette adresse : https://soprod.solocalms.fr
 - Cela permet d'éviter les conflits avec d'autres sites */
 
 :root {
-	--main: #845e37; /* Couleur principale du thème */
-	--secondary: #10596c ; /* Couleur secondaire, haut des tableaux */
-	--accent: #ccb789; /* Couleur des onglets en hauts des sous-fiches */
+	--main: #6d6278; /* Couleur principale du thème */
+	--secondary: #8e6c64 ; /* Couleur secondaire, haut des tableaux */
+	--accent: #FFCDB2; /* Couleur des onglets en hauts des sous-fiches */
 	--relance-val: #133fb9; /* Couleur de la qualification de relance de validation */
 	--contact-principal: #507949; /* Couleur de surlignage du contact principal */
 	--contact-secondaire: #797849; /* Couleur de surlignage du contact secondaire */
@@ -31,8 +31,17 @@
 	--vert-fluo: #0f0;
 	--delete : #a64545;
 }
+html{
+	overflow-x: hidden;
+}
 .page-header.navbar .page-logo .logo-default{
-	filter:grayscale(1)
+	filter:grayscale(0.5)
+}
+.page-header.navbar {
+    background-color: var(--almost-black);
+}
+.pull-right.icon-check.tooltips.alertReadAll{
+	color:var(--vert-fluo) !important;
 }
 span[data-index="2641"]{ /* CHANGE CE NUMERO POUR QUE CE SOIT LE TIENS*/
 	color: var(--accent);
@@ -43,7 +52,7 @@ body, .eventType {
 	font-family: "Poppins", sans-serif;
 }
 body, .page-content, .table-scrollable > .table, .select2-results .select2-highlighted, .tabbable-custom > .tab-content, #masterWebGroupPortlet .nav.nav-tabs, .formGroupPortlet {
-	background-color: var(--dark-grey) !important;
+	background-color: var(--darkest-grey) !important;
 }
 .select2-drop{
 	background-color:var(--almost-black);
@@ -65,8 +74,17 @@ body, .page-content, .table-scrollable > .table, .select2-results .select2-highl
 	color:var(--accent);
 	margin-right:3px
 }
-.progress > .progress-bar-success, .jumbotron, .form-wizard .steps > li.active > a.step .number, .requestTable [data-completed="0"] td, .red-thunderbird.btn {
+.progress > .progress-bar-success, .form-wizard .steps > li.active > a.step .number, .requestTable [data-completed="0"] td, .red-thunderbird.btn {
 	background-color: var(--accent) !important;
+}
+.jumbotron{
+	background-color: var(--main) !important;
+}
+.dashboard-stat .visual > i{
+	margin-left:0;
+    font-size: 80px;
+    line-height: 70px;
+}
 }
 label {
 	text-align: left !important
@@ -88,7 +106,7 @@ h1,h2,h3,h4,p,span,td,label,div,.form-control,.table-advance tr td,#masterWebGro
 	color: var(--almost-white);
 	font-family: "Poppins";
 }
-h1,h2,h3,h4{
+h1,h2,h4{
 	padding-left:0 !important
 }
 .tile.shortcutClient, .tile.shortcutContract, .tile[data-title*="Call"], .tile[data-title*="CRM"], .tile[data-title*="COMMERCIAL"], .tile[data-title*="CONTRAT"], .tile[data-title*="VENTE"], .tile[data-title*="optimo"], .tile[data-title*="SOOPTIMO"], .tile[data-title*="ESCALADE"], .tile[data-title*="PRODUIT"], .tile[data-title*="PVI"], .tile[data-title*="DMS"], .tile[data-title*="Commentaires NDD"], .tile[data-title*="SEARCH"], .tile[data-title*="DOCS"], .tile[data-title*="CHECK"], .tile[data-title*="COCHER"], .tile[data-title*="JOUR"], .tile[data-title*="Template"], .tile[data-title*="JOUR"], .tile[data-title*="REPORTAGE"], .tile[data-title*="EXPRESSIONS"], .tile[data-title*="M1"], .tile[data-title*="presence"], .tile[data-title*="RECLAMATION"], .tile[data-title*="VENDEUR"], .tile[data-title*="SUIVI"], .tile[data-title*="TYPE MODIFICATION"], .tile[data-title*="CONTENU"], .tile[data-title*="GPS"], .tile[data-title*="FORMULAIRE"], .tile[data-title*="EMAILS"], .tile[data-title*="emails"], .tile[data-title*="Formulaire"], .tile[data-title*="seo"],.tile[data-title="Qualifications"] {
@@ -104,16 +122,28 @@ i.star-secondary {
 #header_events_bar>.dropdown-toggle>.badge-default{
 	background-color:var(--delete)
 }
+.row.webPage > .col-md-6, .row.webPage > .col-md-12{
+	padding:0 
+}
+.row.webPage > .col-md-6{
+	border-right:2px solid var(--light-grey)
+}
 
 /* Fonds de boxs */
 .portlet.box {
 	border: 0 !important;
 	background-color: var(--dark-grey) !important;
 }
+.form .form-body {
+    padding: 0 30px;
+}
+.countriesTelephone {
+    width: 38px !important;
+}
 .portlet.box > .portlet-title {
-	border-radius: 5px 5px 0 0 !important;
 	background-color: var(--light-grey) !important;
-	border-bottom: 0 !important
+	border-bottom: 0 !important;
+	padding-left: 20px;
 }
 .portlet > .portlet-title > .caption,
 #myCalendarScheduleName,
@@ -142,9 +172,14 @@ i.star-secondary {
 	color: var(--accent);
 }
 .prev a, .next a {
-    background-color: var(--secondary) !important;
+    background-color: transparent !important;
 }
-
+.pagination .active > a, .pagination .active > a:hover {
+    background: var(--main) !important;
+}
+#idle-message-wrapper > span{
+	color:var(--almost-black)
+}
 
 /* Tableaux*/
 th[colspan] {
@@ -166,6 +201,20 @@ th {
 .table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th {
 	background-color: var(--light-grey) !important;
 }
+table.contactsTable tbody tr td.actions div {
+    display: block;
+}
+table .actions, .contactsTable > thead > tr >th:first-child {
+    min-width: 60px;
+    width: 60px !important;
+}
+.contactsTable tr td{
+	padding: 10px 0 10px 5px !important;
+}
+table tbody tr[data-blocked="1"] td {
+    background-color: var(--main);
+    cursor: no-drop;
+}
 textarea {
 	color: var(--dark-grey)
 }
@@ -182,7 +231,7 @@ feeds li .col1 {
     background-color: var(--almost-black);
 }
 #DetailsRequestModal ~ .row:last-child > div:first-child{
-	width:88vw
+	width:91vw
 }
 #DetailsRequestModal ~ .row:last-child > div:last-child{
 	display:none
@@ -227,7 +276,12 @@ feeds li .col1 {
 .DMSEmailsPortlet > div > .btn-success,
 .DMSDomainsPortlet > div > .btn-success,
 .DMSKeywordsPortlet > div > .btn-success{
-	font-size:13px !important
+	font-size:13px !important;
+	padding:4px 6px !important;
+}
+.btn > i{
+	padding:0 0 !impportant;
+	margin: 0 0 0!important
 }
 .removeKeywords.btn.btn-danger, .btn-danger{
 	background-color:var(--delete) !important;
@@ -243,14 +297,32 @@ a[id^="addDMSDomain"],a[id^="addDMSEmail"]{
 .portlet > .portlet-title > .actions > .btn.btn-sm{
 	border:none !important
 }
+.select2-container-multi .select2-choices .select2-search-choice {
+    padding: 5px 5px 3px 18px;
+    border: 1px solid var(--lighter-grey);
+}
 
 /* page Opérateur*/
+.tabbable-custom > .nav-tabs > li:not(.active){
+	border-top:none;
+	border-bottom:3px solid transparent
+}
 .tabbable-custom > .nav-tabs > li > a {
 	color: var(--accent);
 	font-weight: 600 !important
 }
+#masterWebGroupPortlet .dropdown:hover .dropdown-toggle,
+.nav-tabs .dropdown.open > .dropdown-toggle,
+.nav-pills .dropdown.open > .dropdown-toggle{
+	background-color:transparent;
+	color: var(--accent)
+}
+.page-header.navbar .top-menu .navbar-nav > li.dropdown .dropdown-menu:before,
+.page-header.navbar .top-menu .navbar-nav > li.dropdown .dropdown-menu:after{
+	display:none !important
+}
 .tab-content {
-	padding-top: 55px !important
+	padding-top: 43px !important
 }
 .tabbable-custom > .tab-content {
 	border: 0 !important
@@ -261,7 +333,7 @@ a[id^="addDMSDomain"],a[id^="addDMSEmail"]{
 .operator-content.masterPage {
 	padding: 0 !important;
 }
-.dropdown-menu li > a {
+.dropdown-menu li > a{
     padding: 10px 15px;
     background-color: var(--grey) !important;
     color: var(--accent) !important;
@@ -269,7 +341,7 @@ a[id^="addDMSDomain"],a[id^="addDMSEmail"]{
 .dropdown-menu li.active > a {
     padding: 10px 15px;
     background-color: var(--grey) !important;
-    color: var(--mon-commentaire) !important;
+    color: var(--white) !important;
 }
 #tableRecordsList tr th:nth-of-type(1), #tableRecordsList tr th:nth-of-type(4), #tableRecordsList tr td:nth-of-type(1), #tableRecordsList tr td:nth-of-type(4), .contactsTable tr th:nth-of-type(14), .contactsTable tr td:nth-of-type(14), .contactsTable tr th:nth-of-type(15), .contactsTable tr td:nth-of-type(15), .contactsTable tr th:nth-of-type(16), .contactsTable tr td:nth-of-type(16) {
 	display: none
@@ -299,6 +371,10 @@ a[id^="addDMSDomain"],a[id^="addDMSEmail"]{
 	width:600px;
 	max-width:unset !important;
 	background-color:var(--grey)
+}
+.dropdown-menu{
+	margin-top:0 !important;
+	border:none !important
 }
 #header_events_bar .eventSet.selected{
 	background-color:var(--darkest-grey) !important
@@ -468,7 +544,7 @@ div .tiles .tile .tile-body {
 }
 div .operatorElements {
 	overflow-y: visible;
-	margin-top: 45px;
+	margin-top: 42px;
 }
 div .operatorElements .tile .tile-body > i {
 	font-size: 22px;
@@ -486,10 +562,9 @@ div .operatorElements .tile {
 	border: 1px solid transparent;
 	height: 60px !important;
 	width: 90px !important;
-	border-radius: 4px 0 0 4px !important;
 	background: var(--main) !important;
 	transition: 0.2s;
-	margin: 2px 0
+	margin: 1.5px 0
 }
 div .operatorElements .tile:hover {
 	width: 200px !important;
@@ -539,7 +614,7 @@ textarea {
 }
 .tabbable-custom > .nav-tabs > li.active > a {
 	border: 0 !important;
-	background-color: var(--dark-grey) !important;
+	background-color: transparent !important;
 }
 .notificationHistory tr.sent td {
     background-color: var(--almost-black) !important;
@@ -552,16 +627,20 @@ textarea {
 	background-color: var(--contact-secondaire) !important;
 }
 .tabbable-custom > .nav-tabs > li.active {
-	border-top: 3px solid var(--dark-grey);
+	border-top: none;
+    border-bottom: 3px solid var(--main);
+}
+.nav-tabs>li {
+    margin-bottom: -2px;
 }
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-	color: var(--mon-commentaire)
+	color: var(--white)
 }
 #consultationSearch .select2-results ul.select2-result-sub > li .select2-result-label:before {
 	content: "- ";
 }
 .select2-container .select2-choice .select2-arrow {
-	border-left: 1px solid var(--light-grey);
+	border-left: none;
 }
 .modal-backdrop.in {
     opacity: .7;
@@ -617,15 +696,11 @@ tr.openSubRecords.odd td, tr.indent-subrecords.odd {
 	font-weight: 400 !important;
 }
 .form-wizard .steps > li > a.step > .number {
-	padding: 6px 15px 0px 15px;
+	padding: 6px 15px 0 15px;
 }
 .notificationHistory tr.notsent td,
 .notificationHistory tr.waitingsend td{
     background-color: var(--contact-secondaire) !important;
-}
-.divFilter {
-    float: left !important;
-    margin: 0 7px !important;
 }
 .dashboardGroupTH.dashboardGroupEntities span {
     color: var(--black) !important;
@@ -752,6 +827,9 @@ h6 {
     color: var(--white) !important;
     background-color: var(--main) !important;
 }
+.portlet.calendar .fc-button {
+    top: -13px;
+}
 .fc-unthemed .fc-today {
     background: var(--black);
 }
@@ -840,8 +918,8 @@ body .rdv_calendar_previous:hover  , body .rdv_calendar_next:hover{
 .divFilter {
 	float: left;
 	display: block;
-	width: 19% !important;
-	margin-right: 1%;
+	width: 24% !important;
+    margin: 0 7px !important;
 }
 .record-header {
 	display: none
@@ -864,6 +942,11 @@ body .rdv_calendar_previous:hover  , body .rdv_calendar_next:hover{
 }
 .page-content-wrapper .page-content {
 	margin-left: 204px;
+	padding: 0
+}
+.row.webPage {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .qualificationTr.requestDetailsTr, .table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th {
