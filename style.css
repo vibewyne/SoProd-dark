@@ -1,4 +1,4 @@
-/* Dernière MAJ : 08/06/2023 */
+/* Dernière MAJ : 18/07/2023 */
 
 /* Comment installer le thème SoProd dark ?
 - Installer l'extension Chrome "Stylus"
@@ -680,11 +680,11 @@ a[id^="addDMSEmail"] {
 #masterWebGroupPortlet .chats li.in .message.mine {
     background-color: var(--mon-commentaire) !important;
 }
-#getComments .chats li .message .body,
-#masterWebGroupPortlet .chats li .message .body {
+#getComments .chats li .message .body, #masterWebGroupPortlet .chats li .message .body {
     color: var(--darkest-grey) !important;
-    font-size: 12.25px;
+    font-size: 13px;
     margin: 10px 20px 15px;
+    font-weight: 500;
 }
 .chats li .datetime {
     color: var(--name) !important;
@@ -944,15 +944,16 @@ h6 {
     background-color: var(--main) !important;
     clip-path: inset(4% 1% 4% 1% round 12px);
 }
-.fc-time-grid-event.fc-v-event.fc-event.fc-start.fc-end.fc-not-resizable:not(.fc-time-grid-event.fc-v-event.fc-event.fc-start.fc-end.fc-not-resizable:first-child) {
-    height: max-content;
-    margin-left: -50% !important;
-    background-color: var(--secondary) !important;
+a.fc-time-grid-event.fc-v-event.fc-event.fc-start.fc-end.fc-not-resizable.rdvTooltip {
+    margin-left: -51% !important;
+	min-height: 20px !important;
 }
 .fc-time-grid-event.fc-v-event.fc-event.fc-start.fc-end.fc-not-resizable > .fc-content {
     padding: 5px;
     display: flex;
-    flex-direction: column;
+}
+.fc-bgevent {
+    background: var(--dark-grey) !important;
 }
 .fc-time-grid-container.fc-scroller {
     height: 620px !important;
@@ -973,8 +974,8 @@ h6 {
     font-weight: 600;
 }
 .portlet.calendar .fc-event {
-    margin: 0 !important;
-    width: 102% !important;
+    margin: 0 0 0 -2px !important;
+    width: 103% !important;
     background-color: var(--main) !important;
     border: none;
 }
