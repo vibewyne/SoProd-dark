@@ -1,4 +1,4 @@
-/* Dernière MAJ : 18/07/2023 */
+/* Dernière MAJ : 26/07/2023 */
 
 /* Comment installer le thème SoProd dark ?
 - Installer l'extension Chrome "Stylus"
@@ -10,8 +10,8 @@
 */
 
 :root {
-	--main: #6d6278; /* Couleur principale du thème */
-	--secondary: #8e6c64 ; /* Couleur secondaire, haut des tableaux */
+	--main: #507974; /* Couleur principale du thème */
+	--secondary: #627a97 ; /* Couleur secondaire, haut des tableaux */
 	--accent: #FFCDB2; /* Couleur des onglets en hauts des sous-fiches */
 	--relance-val: #133fb9; /* Couleur de la qualification de relance de validation */
 	--contact-principal: #507949; /* Couleur de surlignage du contact principal */
@@ -144,6 +144,8 @@ body {
 .contactsTable tr th:nth-of-type(14),
 .contactsTable tr th:nth-of-type(15),
 .contactsTable tr th:nth-of-type(16),
+.contactsTable tr th:nth-of-type(17),
+.contactsTable tr [data-label="Fax"],
 .dashboardGroupTH.dashboardGroupEntities span i,
 .dropdown-menu .divider,
 .fc-event .fc-bg,
@@ -188,6 +190,11 @@ body {
 .tile[data-title*="seo"],
 .tile[data-title="Qualifications"] {
     display: none;
+}
+.contactsTable  [data-label="Tel"],
+.contactsTable  [data-label="Mobile"],
+.contactsTable  [data-label="TelSupp"]{
+	width:170px
 }
 .divFilter,.eventType {
     display: block;
@@ -725,7 +732,7 @@ a[id^="addDMSEmail"] {
     padding: 10px 0 !important;
 }
 .externalPortlet a div {
-    margin: 3px 0;
+    margin: 1px 0;
     height: 35px;
     line-height: 30px;
 }
@@ -952,8 +959,8 @@ a.fc-time-grid-event.fc-v-event.fc-event.fc-start.fc-end.fc-not-resizable.rdvToo
     padding: 5px;
     display: flex;
 }
-.fc-bgevent {
-    background: var(--dark-grey) !important;
+#calendar.myTeams .calendarEvent--12, #userCalendarWrapper .calendarEvent-12, #dashboardCalendar .calendarEvent-12 {
+    background: var(--darker-grey) !important;
 }
 .fc-time-grid-container.fc-scroller {
     height: 620px !important;
@@ -1053,6 +1060,20 @@ body .rdv_calendar_previous {
     font-size: 18px;
     letter-spacing: 1px;
 }
+.souploadTable tr > td, .souploadTable tr > th{
+	text-align:center
+}
+.souploadTable tr > td:first-child, .souploadTable tr > th:first-child{
+	text-align:left !important
+}
+.souploadTable tr > td:nth-of-type(2) {
+    width: 15% !important;
+	text-align: center;
+    background-color: var(--dark-grey);
+}
+.souploadTable tr > td:nth-of-type(1) {
+    width: 65% !important;
+}
 #layout-page-sidebar {
     height: 100vh !important;
 }
@@ -1097,7 +1118,7 @@ tr.openSubRecords.even td {
     border-radius: 5px !important;
     line-height: 23px !important;
 	font-weight:400;
-	color:#000;
+	color:var(--darkest-grey);
 }
 .available {
     background: var(--contact-principal) !important;
